@@ -3,4 +3,5 @@ import binascii
 import base64
 
 def hexToBase64(s):
-    return base64.base64encode(binascii.unhexlify(s));
+    raw_bytes = binascii.unhexlify(s)
+    return base64.b64encode(raw_bytes)
